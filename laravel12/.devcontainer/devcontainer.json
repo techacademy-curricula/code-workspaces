@@ -1,0 +1,131 @@
+{
+  "name": "My Laravel Dev Container",
+  "dockerComposeFile": "../compose.yaml",
+  "service": "php",
+  "workspaceFolder": "/app",
+  "remoteUser": "dev",
+  "overrideCommand": false,
+  "remoteEnv": {
+    "SHELL": "/bin/bash"
+  },
+  "postStartCommand": "echo 'Switched to bash!'",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Blade
+        "blade.format.enable": true,
+
+        // CSS
+        "css.validate": true,
+        "css.format.enable": true,
+        "css.format.newlineBetweenRules": true,
+        "css.format.newlineBetweenSelectors": true,
+        "css.format.maxPreserveNewLines": 10,
+        "css.format.preserveNewLines": true,
+        "css.format.spaceAroundSelectorSeparator": false,
+
+        // Debug
+        "debug.allowBreakpointsEverywhere": true,
+        "debug.inlineValues": "on",
+        "debug.toolBarLocation": "docked",
+
+        // Emmet
+        "emmet.includeLanguages": { "blade": "html" },
+
+        // Editor
+        "editor.bracketPairColorization.enabled": true,
+        "editor.formatOnSave": false,
+        "editor.guides.bracketPairs": "active",
+        "editor.insertSpaces": true,
+        "editor.rulers": [],
+        "editor.tabSize": 2,
+        "editor.unicodeHighlight.ambiguousCharacters": true,
+        "editor.unicodeHighlight.includeComments": true,
+        "editor.wordWrap": "off",
+
+        // Files
+        "files.associations": {
+          "*.php": "php",
+          "*.blade.php": "blade",
+          ".env": "dotenv",
+          ".env.example": "dotenv"
+        },
+        "files.eol": "\n",
+        "files.encoding": "utf8",
+        "files.exclude": { "**/desktop.ini": true },
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": false,
+
+        // HTML
+        "html.format.enable": true,
+        "html.format.indentInnerHtml": true,
+        "html.format.maxPreserveNewLines": 10,
+        "html.format.preserveNewLines": true,
+        "html.format.wrapLineLength": 0,
+        "html.format.wrapAttributes": "preserve",
+        "javascript.format.enable": true,
+        "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": true,
+        "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+        "javascript.validate.enable": true,
+
+        // PHP
+        "php.suggest.basic": true,
+        "php.validate.enable": true,
+        "php.validate.run": "onSave",
+
+        // Terminal
+        "terminal.integrated.defaultProfile.linux": "bash",
+
+        // Window
+        "window.autoDetectColorScheme": false,
+        "workbench.colorTheme": "GitHub Light",
+
+        // Each Language
+        "[php]": {
+          "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+          "editor.tabSize": 4
+        },
+        "[blade]": {
+          "editor.defaultFormatter": "onecentlin.laravel-blade",
+          "editor.tabSize": 4
+        },
+        "[html]": {
+          "editor.defaultFormatter": "vscode.html-language-features"
+        },
+        "[css]": {
+          "editor.defaultFormatter": "vscode.css-language-features"
+        },
+        "[javascript]": {
+          "editor.defaultFormatter": "vscode.typescript-language-features"
+        }
+      },
+      "extensions": [
+        // Basics
+        "ms-ceintl.vscode-language-pack-ja",
+        "GitHub.github-vscode-theme",
+        "oderwat.indent-rainbow",
+        "ritwickdey.LiveServer",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "ms-vscode.remote-explorer",
+
+        // PHP
+        "bmewburn.vscode-intelephense-client",
+        "mehedidracula.php-namespace-resolver",
+
+        // Laravel
+        "onecentlin.laravel-blade",
+        "onecentlin.laravel5-snippets",
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "ryannaddy.laravel-artisan",
+        "shufo.vscode-blade-formatter",
+
+        // Git
+        "eamodio.gitlens",
+
+        // Utilities
+        "mikestead.dotenv"
+      ]
+    }
+  }
+}
